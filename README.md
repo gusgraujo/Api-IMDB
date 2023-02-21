@@ -1,8 +1,18 @@
 # BeeWatching project
 
+## About the project
+
+This project was built to create an application that communicates with the IMDB API and provides a limited set of information to a specific application called BeeWatching. The goal is to enable users of BeeWatching to access essential information about movies and TV shows, such as ratings, reviews, and plot summaries, without overwhelming them with unnecessary details.
+
+This project utilizes Java and Spring Boot technology. The application is equipped with a Swagger extension to test the endpoints and a Postman file that allows you to test it yourself.
+
+### Pre-requisites 
+
+* Java 11
+
 
 ## Diagram
-![Diagram](/uploads/79c03cb375b5c755449488ad86867384/Diagram.jpg)
+![Diagram](./docs/Diagram_arch.jpg)
 
 ## Setup API and database
 
