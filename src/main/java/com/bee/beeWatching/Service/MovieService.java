@@ -5,20 +5,24 @@ import com.bee.beeWatching.Model.Movie;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.Optional;
 
-public interface MovieService {
-    public String getMovieTitleById(String idMovie) throws IOException;
+public interface MovieService{
 
-    public Movie getMovieById(String idMovie) throws ResourceNotFoundException;
+    public Movie getMovieById(String idMovie) throws IOException;
 
-    public Movie save(Movie newMovie);
-
-    public List<Movie> getAllMovies();
-
-    public Optional<Movie> getMovieSaved(String idMovie);
-
-    public void deleteMovieSaved(Movie movie);
+    public String getMovieTrailerById(String idMovie) throws IOException;
 
     public Movie getMovieByTitle(String title) throws IOException;
+
+    Movie save(Movie entity);
+
+    Movie findById(int id);
+
+    List<Movie> findAll();
+
+    Movie findCurrentMovie();
+
+    void deleteById(int id);
+
+    public Movie updateMovie(int id, Movie movie) throws ResourceNotFoundException;
 }

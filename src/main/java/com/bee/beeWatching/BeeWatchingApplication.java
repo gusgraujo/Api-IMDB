@@ -12,6 +12,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableConfigurationProperties({
 		FileStorageProperties.class
 })
+@EnableJpaRepositories(basePackages = "com.bee.beeWatching.Repository")
 public class BeeWatchingApplication {
 
 	public static void main(String[] args) {

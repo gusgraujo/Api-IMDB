@@ -3,23 +3,23 @@ package com.bee.beeWatching.Service;
 import com.bee.beeWatching.Exception.ResourceNotFoundException;
 import com.bee.beeWatching.Model.Season;
 
+import java.util.Date;
 import java.util.List;
-import java.util.Optional;
 
-public interface SeasonService {
+public interface SeasonService{
 
     public Season getCurrentSeason();
 
+    public boolean isBetweenSeason(Date dateStart, Date dateEnd);
 
-    boolean IsHappeningSeason();
+    public Season updateSeason(int id, Season season) throws ResourceNotFoundException;
 
-    public Season createSeason(Season newSeason) throws Exception;
+    public List<Season> getSeasonByName(String name);
+    Season saveSeason(Season entity);
 
-    public List<Season> getAllSeasons();
+    Season findById(int id);
 
-    public Optional<Season> getSeasonById(int id) throws ResourceNotFoundException;
+    List<Season> findAll();
 
-    public Season saveSeason(Season newSeason);
-
-    public void deleteSeason(int id) throws ResourceNotFoundException;
+    void deleteById(int id);
 }

@@ -1,58 +1,42 @@
 package com.bee.beeWatching.Model;
 
 
+import com.bee.beeWatching.Model.Base.BaseEntity;
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "user")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private int id;
-    private String name;
-    private String discordName;
+public class User extends BaseEntity {
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "avatar_id", referencedColumnName = "id")
-    private Avatar avatarFile;
+    @NotNull
+    private String username;
+    @NotNull
+    private String password;
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getDiscordName() {
-        return discordName;
+    public String getPassword() {
+        return password;
     }
 
-    public void setDiscordName(String discordName) {
-        this.discordName = discordName;
-    }
-
-
-    public int getId() {
-        return id;
-    }
-
-    public Avatar getAvatarFile() {
-        return avatarFile;
-    }
-
-    public void setAvatarFile(Avatar avatarFile) {
-        this.avatarFile = avatarFile;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", discordName='" + discordName + '\'' +
-                ", fileName='" + avatarFile + '\'' +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", id=" + id +
                 '}';
     }
 }

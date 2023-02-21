@@ -1,20 +1,27 @@
 package com.bee.beeWatching.Service;
 
+import com.bee.beeWatching.Exception.ResourceNotFoundException;
 import com.bee.beeWatching.Model.User;
-import org.springframework.stereotype.Service;
+import org.springframework.core.io.Resource;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
-import java.util.Optional;
 
 
 public interface UserService {
 
-    public User getRandomUser();
-    public List<User> getAll();
+    public User updateUser(int id, User user) throws ResourceNotFoundException;
 
-    public Optional<User> getUserById(int id);
+    User saveUser(User entity);
 
-    public User save(User newUser);
-    public void delete(User user);
-    public List<User> getUsersByName(String name);
+    User findById(int id) throws ResourceNotFoundException;
+
+    public List<User> findAll();
+
+    void deleteById(int id);
+
+    public User findByUsername(String username);
+
 }

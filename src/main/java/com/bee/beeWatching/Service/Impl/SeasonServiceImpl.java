@@ -5,16 +5,21 @@ import com.bee.beeWatching.Exception.ResourceNotFoundException;
 import com.bee.beeWatching.Model.Season;
 import com.bee.beeWatching.Repository.SeasonRepository;
 import com.bee.beeWatching.Service.SeasonService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import javax.persistence.NonUniqueResultException;
+import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
-public class SeasonServiceImpl implements SeasonService {
+public class SeasonServiceImpl  implements SeasonService {
+
+
+    private static final Logger logger = LogManager.getLogger(SeasonServiceImpl.class);
 
     @Autowired
     SeasonRepository seasonRepository;
@@ -22,53 +27,63 @@ public class SeasonServiceImpl implements SeasonService {
     @Override
     public Season getCurrentSeason()
     {
-        return seasonRepository.findCurrentSeason();
+        return seasonRepository.getCurrentSeason();
     }
 
     @Override
-    public boolean IsHappeningSeason()
-    {
-        return seasonRepository.findCurrentSeason() != null;
+    public boolean isBetweenSeason(Date dateStart, Date dateEnd) {
+        return seasonRepository.isBetweenSeason(dateStart, dateEnd) != null;
     }
 
     @Override
-    public Season createSeason(Season newSeason) throws Exception
+    public Season updateSeason(int id, Season season) throws ResourceNotFoundException {
+        Season existingSeason = seasonRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Season not found with id: " + id));
+        existingSeason.setName(season.getName());
+        existingSeason.setDateStart(season.getDateStart());
+        existingSeason.setDateEnd(season.getDateEnd());
+        saveSeason(existingSeason);
+        return seasonRepository.save(existingSeason);
+    }
+
+    @Override
+    public List<Season> getSeasonByName(String name)
     {
-        Date now = new Date();
-        if (newSeason.getDateEnd().compareTo(now) > 0 || newSeason.getDateEnd().compareTo(now) == 0){
-            return seasonRepository.save(newSeason);
-        }else {
-            throw new Exception("Date invalid");
+        return seasonRepository.findByName(name);
+    }
+
+    @Override
+    public Season saveSeason(Season entity) {
+        try {
+            logger.info("Season saveSeason INI");
+            if (entity.getGuuid() == null) {
+                entity.setGuuid(UUID.randomUUID());
+            }
+            if (entity.getCreatedAt() == null) {
+                entity.setCreatedAt(new Date());
+            }
+            entity.setUpdatedAt(new Date());
+            logger.info("Season saveSeason END");
+            return seasonRepository.save(entity);
+        } catch (Exception e) {
+            logger.error("Error saving Season: " + e.getMessage(), e);
+            throw new RuntimeException("Error saving Season", e);
         }
     }
 
     @Override
-    public List<Season> getAllSeasons()
-    {
+    public Season findById(int id) {
+        Optional<Season> optionalEntity = seasonRepository.findById(id);
+        return optionalEntity.orElse(null);
+    }
+
+    @Override
+    public List<Season> findAll() {
         return seasonRepository.findAll();
     }
 
-    public Optional<Season> getSeasonById(int id) throws ResourceNotFoundException {
-        try {
-            return seasonRepository.findById(id);
-        } catch (Exception e){
-            throw new ResourceNotFoundException("Can not find season with ID :"+ id);
-        }
-    }
-
     @Override
-    public Season saveSeason(Season newSeason) {
-        return seasonRepository.save(newSeason);
+    public void deleteById(int id) {
+        seasonRepository.deleteById(id);
     }
-
-    @Override
-    public void deleteSeason(int id) throws ResourceNotFoundException {
-        try {
-            seasonRepository.deleteById(id);
-        }catch (Exception e){
-            throw  new ResourceNotFoundException("Can not find the season");
-        }
-    }
-
-
 }
