@@ -1,0 +1,13 @@
+
+b	java:S112;"FDefine and throw a dedicated exception instead of using a generic one.(Şôß8‰šĞ¥å0
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬¶…|
+N
+java:S3416"3Update this logger to use "MovieServiceImpl.class".(Â¤ûûúÿÿÿÿ
+^
+java:S3457:"AFormat specifiers should be used instead of string concatenation.(Ë¤«8ÌšĞ¥å0
+\
+java:S1854X"ARemove this useless assignment to local variable "existingMovie".(€ÍÄ¢ÿÿÿÿÿ
+M
+java:S1481X"2Remove this unused "existingMovie" local variable.(€ÍÄ¢ÿÿÿÿÿ
+\
+java:S3457\"AFormat specifiers should be used instead of string concatenation.(ï†·ãùÿÿÿÿ

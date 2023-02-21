@@ -1,0 +1,32 @@
+
+?
+java:S2629/"$Invoke method(s) only conditionally.(®Âğ£ıÿÿÿÿ
+?
+java:S2629?"$Invoke method(s) only conditionally.(ûğŒôÿÿÿÿÿ
+:
+java:S2629B"$Invoke method(s) only conditionally.(©‰¾Ï
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ö¢²ş
+\
+java:S3457L"AFormat specifiers should be used instead of string concatenation.(Ÿ±ãÄıÿÿÿÿ
+e
+java:S1128"ORemove this unused import 'com.bee.beeWatching.Exception.FileStorageException'.(Ø¢‡µ
+W
+java:S1128"ARemove this unused import 'org.springframework.core.io.Resource'.(¹ÒÁ
+\
+java:S1128"ARemove this unused import 'org.springframework.data.domain.Page'.(˜âüÿÿÿÿ
+^
+java:S1128"HRemove this unused import 'org.springframework.data.domain.PageRequest'.(ºêâÚ
+`
+java:S1128"ERemove this unused import 'org.springframework.data.domain.Pageable'.(‡ë‚Öıÿÿÿÿ
+\
+java:S1128"ARemove this unused import 'org.springframework.data.domain.Sort'.(ëÿ€ëøÿÿÿÿ
+\
+java:S1128"ARemove this unused import 'org.springframework.http.HttpHeaders'.(ãŸñ×úÿÿÿÿ
+Z
+java:S1128"?Remove this unused import 'org.springframework.http.MediaType'.(úŸİ¯şÿÿÿÿ
+g
+java:S1128"LRemove this unused import 'org.springframework.web.multipart.MultipartFile'.(ôŸœÿÿÿÿÿ
+X
+java:S1128"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…
+K
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ

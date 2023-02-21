@@ -1,0 +1,7 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¥¬‚ãûÿÿÿÿ
+W	java:S1075"BConstructor has 13 parameters, which is greater than 7 authorized.(¤ÿñë
+U
+java:S1161\":Add the "@Override" annotation above this method signature(ú›Šøøÿÿÿÿ
+P
+java:S1161`":Add the "@Override" annotation above this method signature(Ò’Š¯

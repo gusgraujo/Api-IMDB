@@ -1,0 +1,46 @@
+
+k
+java:S1192"PDefine a constant instead of duplicating this literal "X-RapidAPI-Host" 7 times.(øÄåşÿÿÿÿ
+n
+java:S1192¥"KDefine a constant instead of duplicating this literal "metacritic" 3 times.(•ßó£ÿÿÿÿÿ8…Â‰ıå0
+a
+java:S1192#"FDefine a constant instead of duplicating this literal "title" 5 times.(ê”¸æşÿÿÿÿ
+m
+java:S1192¥"JDefine a constant instead of duplicating this literal "metaScore" 3 times.(•ßó£ÿÿÿÿÿ8†Â‰ıå0
+j
+java:S1192"ODefine a constant instead of duplicating this literal "X-RapidAPI-Key" 7 times.(ñ¯üúÿÿÿÿ
+Y
+java:S2629="7Use the built-in formatting to construct this argument.(«ã„¶ıÿÿÿÿ8ŠÂ‰ıå0
+Y
+java:S2629A"7Use the built-in formatting to construct this argument.(Å‹Ä•ùÿÿÿÿ8ŒÂ‰ıå0
+Y
+java:S2629N"7Use the built-in formatting to construct this argument.(“Çşêûÿÿÿÿ8Â‰ıå0
+Y
+java:S4973?"<Strings and Boxed types should be compared using "equals()".(¬ü°—8‘Â‰ıå0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—ôüóÿÿÿÿÿ
+m	java:S116"XRename this field "RAPID_API_KEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÒ©³
+s	java:S116"YRename this field "RAPID_API_HOST" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï ¦¦úÿÿÿÿ
+7
+java:S1170"!Make this final field static too.(ñÒ©³
+<
+java:S1170"!Make this final field static too.(ï ¦¦úÿÿÿÿ
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(ü¿…ªüÿÿÿÿ
+c
+java:S3457="AFormat specifiers should be used instead of string concatenation.(«ã„¶ıÿÿÿÿ8Ã‰ıå0
+c
+java:S3457A"AFormat specifiers should be used instead of string concatenation.(Å‹Ä•ùÿÿÿÿ8‘Ã‰ıå0
+c
+java:S3457K"AFormat specifiers should be used instead of string concatenation.(Ú§ÓÊÿÿÿÿÿ8”Ã‰ıå0
+c
+java:S3457N"AFormat specifiers should be used instead of string concatenation.(“Çşêûÿÿÿÿ8—Ã‰ıå0
+S	java:S106e"9Replace this use of System.out or System.err by a logger.(Úà¡µúÿÿÿÿ
+N
+java:S1854•"7Remove this useless assignment to local variable "now".(•ÛùÈ
+?
+java:S1481•"(Remove this unused "now" local variable.(•ÛùÈ
+s
+java:S1128"QRemove this unused import 'com.bee.beeWatching.Controller.ParticipantController'.(Ñğ¨Ãúÿÿÿÿ8¸Ã‰ıå0
+a
+java:S1128"DRemove this unused import 'com.fasterxml.jackson.databind.JsonNode'.(–×ª8¸Ã‰ıå0
+\
+java:S1128":Remove this unused import 'javax.sound.midi.SysexMessage'.(áÔíÄúÿÿÿÿ8¹Ã‰ıå0

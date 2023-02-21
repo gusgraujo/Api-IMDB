@@ -1,0 +1,730 @@
+{
+	"info": {
+		"_postman_id": "6dbe905c-6351-4bb1-85c0-1104c7a0bdf2",
+		"name": "beeWatching",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8464098"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "FileStorage",
+					"item": [
+						{
+							"name": "Set avatar image",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/gusgr/OneDrive/Área de Trabalho/Certificados/Fotoo.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/setAvatar/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"setAvatar",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Download user Avatar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/downloadFile/{{avatarPicture}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"downloadFile",
+										"{{avatarPicture}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Avatar By User ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/users/getImage/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"getImage",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users sorted",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/getAllSorted",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"getAllSorted"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users/{{id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users/getName/{{userName}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"getName",
+								"{{userName}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Random User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users/randomUser",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"randomUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Gustavo\",\r\n    \"discordName\": \"araujogi\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Gastão \",\r\n    \"discordName\": \"gggastao\"\r\n\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/update/{{id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"update",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/users/delete/{{id}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"delete",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movie",
+			"item": [
+				{
+					"name": "Get all movies already selected",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/movies/getAll",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movies",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get movie by IMDB ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/movies/get/{{movieID}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movies",
+								"get",
+								"{{movieID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a movie by Name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/movies/getName/{{movieName\n}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movies",
+								"getName",
+								"{{movieName\n}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Select movie when the user is chosen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/movies/select/{{movieID}}?userId=1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movies",
+								"select",
+								"{{movieID}}"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete movie selected by user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/movies/deleteSelected?idMovie={{movieID}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movies",
+								"deleteSelected"
+							],
+							"query": [
+								{
+									"key": "idMovie",
+									"value": "{{movieID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movies By Season",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/movies//getSeason/0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movies",
+								"",
+								"getSeason",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Movie Background",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseUrl}}/movies/selectBackground/{{movieID}}?url={{movieBackground}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movies",
+								"selectBackground",
+								"{{movieID}}"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "{{movieBackground}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get movies of current season",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/movies/currentSeason",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movies",
+								"currentSeason"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sorted Season",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/movies/getSeasonSorted/{{seasonId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movies",
+								"getSeasonSorted",
+								"{{seasonId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Season",
+			"item": [
+				{
+					"name": "Get recent season",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/season/getCurrent",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"season",
+								"getCurrent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new Season",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"winter season\",\r\n    \"dateStart\": \"2022-01-10\",\r\n    \"dateEnd\": \"2024-02-10\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/season/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"season",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete season",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/season/delete/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"season",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All seasons",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/season/getAll",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"season",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update season",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"summer season\",\r\n    \"dateStart\": \"2023-01-11\",\r\n    \"dateEnd\": \"2023-02-10\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/season/update/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"season",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "id",
+			"value": "7",
+			"type": "string"
+		},
+		{
+			"key": "movieName\n",
+			"value": "Avatar",
+			"type": "string"
+		},
+		{
+			"key": "userName",
+			"value": "Gustavo",
+			"type": "string"
+		},
+		{
+			"key": "movieID",
+			"value": "tt0499549",
+			"type": "string"
+		},
+		{
+			"key": "movieBackground",
+			"value": "https://sm.ign.com/ign_pt/gallery/e/every-acto/every-actor-and-character-confirmed-for-the-avatar-sequels_ua72.jpg",
+			"type": "string"
+		},
+		{
+			"key": "avatarPicture",
+			"value": "Fotoo.jpg",
+			"type": "string"
+		},
+		{
+			"key": "seasonId",
+			"value": "1",
+			"type": "string"
+		}
+	]
+}

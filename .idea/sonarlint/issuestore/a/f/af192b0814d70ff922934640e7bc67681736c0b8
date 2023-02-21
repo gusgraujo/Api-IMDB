@@ -1,0 +1,17 @@
+
+[	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(œºƒí
+M
+java:S2629k"7Use the built-in formatting to construct this argument.(ÕÅó
+@
+java:S2629‹"$Invoke method(s) only conditionally.(ª„âúÿÿÿÿ
+@
+java:S2629"$Invoke method(s) only conditionally.(Å„˜ßûÿÿÿÿ
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬¶…|
+W
+java:S3457-"AFormat specifiers should be used instead of string concatenation.(æá•Æ
+\
+java:S3457C"AFormat specifiers should be used instead of string concatenation.(Ä¢ÿÿÿÿÿ
+g
+java:S5998a"LRefactor this repetition that can lead to a stack overflow for large inputs.(Ìû³ıÿÿÿÿ
+W
+java:S3457k"AFormat specifiers should be used instead of string concatenation.(ÕÅó

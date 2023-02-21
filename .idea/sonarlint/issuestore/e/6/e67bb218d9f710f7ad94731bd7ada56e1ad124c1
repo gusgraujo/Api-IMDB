@@ -1,0 +1,11 @@
+
+[	java:S112A"FDefine and throw a dedicated exception instead of using a generic one.(ÌÆéÅ
+:
+java:S2629I"$Invoke method(s) only conditionally.(·ĞÓå
+?
+java:S2629L"$Invoke method(s) only conditionally.(¢­·úÿÿÿÿ
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬¶…|
+\
+java:S3457("AFormat specifiers should be used instead of string concatenation.(Ä¢ÿÿÿÿÿ
+\
+java:S3457@"AFormat specifiers should be used instead of string concatenation.(£ÌÊÔşÿÿÿÿ
